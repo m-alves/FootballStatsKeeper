@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:text="@string/header"
+        style="@style/style_header"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom = "16dp">
+
+        <TextView
+            android:text="@string/subheader_team_A"
+            style="@style/style_subheader"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:text="@string/subheader_team_B"
+            style="@style/style_subheader"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:text="@string/goal_scored_button"
+            style="@style/style_button_stats_left"
+            android:onClick="scoredTeamA"
+            />
+
+        <TextView
+            android:id="@+id/goals_team_A"
+            style="@style/style_stats_view_goals"
+            tools:text="0"
+            />
+
+        <TextView
+            style="@style/style_stats_label"
+            android:text="@string/goals_label"/>
+
+        <TextView
+            android:id="@+id/goals_team_B"
+            style="@style/style_stats_view_goals"
+            tools:text="0"
+            />
+
+        <Button
+            android:text="@string/goal_scored_button"
+            style="@style/style_button_stats_right"
+            android:onClick="scoredTeamB"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:text="@string/foul_committed_button"
+            style="@style/style_button_stats_left"
+            android:onClick="addFoulTeamA"
+            />
+
+        <TextView
+            android:id="@+id/fouls_team_A"
+            style="@style/style_stats_view"
+            tools:text="0"/>
+
+        <TextView
+            style="@style/style_stats_label"
+            android:text="@string/fouls_label"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/fouls_team_B"
+            style="@style/style_stats_view"
+            tools:text="0"/>
+
+        <Button
+            android:text="@string/foul_committed_button"
+            style="@style/style_button_stats_right"
+            android:onClick="addFoulTeamB"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:text="@string/corner_won_button"
+            style="@style/style_button_stats_left"
+            android:onClick="addCornerTeamA"
+            />
+
+        <TextView
+            android:id="@+id/corners_team_A"
+            style="@style/style_stats_view"/>
+
+        <TextView
+            style="@style/style_stats_label"
+            android:text="@string/corners_label"
+            />
+
+        <TextView
+            android:id="@+id/corners_team_B"
+            style="@style/style_stats_view"/>
+
+        <Button
+            android:text="@string/corner_won_button"
+            style="@style/style_button_stats_right"
+            android:onClick="addCornerTeamB"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="@string/reset_button"
+        android:layout_gravity = "center"
+        android:layout_marginTop="12dp"
+        android:onClick="reset"
+        />
+
+</LinearLayout>
